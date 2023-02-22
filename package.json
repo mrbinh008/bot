@@ -2,9 +2,10 @@
   "name": "bot_telegram",
   "version": "1.0.0",
   "description": "bot telegram",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Mr Binh",
   "license": "ISC",
@@ -17,3 +18,4 @@
     "openai": "^3.1.0"
   }
 }
+

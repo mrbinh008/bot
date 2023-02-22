@@ -12,4 +12,4 @@ const schema = new mongoose.Schema({
 
 const Message = mongoose.model('Message', schema);
 
-module.exports = Message;
+module.exports = Message;Gitignore
