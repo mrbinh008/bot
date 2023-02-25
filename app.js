@@ -3,15 +3,15 @@ const TelegramBot = require("node-telegram-bot-api");
 const ChatGPTService = require("./services/chatgpt.service");
 const express = require('express');
 const bodyParser = require('body-parser');
-const { MessengerBot } = require('messenger-bot');
+const MessengerBot = require('messenger-bot');
 //
 const telegramToken = process.env.TELEGRAM_KEY;
 const app = express();
 app.use(bodyParser.json());
 
 const bot_mess = new MessengerBot({
-  accessToken: PAGE_ACCESS_TOKEN,
-  verifyToken: VERIFY_TOKEN
+  accessToken: process.env.PAGE_ACCESS_TOKEN,
+  verifyToken: process.env.VERIFY_TOKEN
 });
 // Khởi tạo con Bot từ Token với chế độ Polling
 const bot_tele = new TelegramBot(telegramToken, { polling: true });
