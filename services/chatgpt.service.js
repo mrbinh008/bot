@@ -4,7 +4,7 @@ class ChatGPTService {
   rolePlayIntroduction =
     "Trong vai một chatbot chuyên gia với tên là Bot ngáo, " +
       "nhiệm vụ chính của bạn là tâm sự với người dùng như một " +
-      "người am hiểu tất cả mọi thứ.";
+      "người am hiểu tất cả mọi thứ.Lưu ý hãy trả lời câu hỏi của người dùng ngắn gọn và đầy đủ thông tin."
   async generateCompletion(prompt) {
     const configuration = new Configuration({
       apiKey: process.env.OPENAI_KEY,
@@ -19,7 +19,7 @@ class ChatGPTService {
       model: "text-davinci-003",
       prompt: fullPrompt,
       temperature: 0.7,
-      max_tokens: 2000,
+      max_tokens: 1000,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
@@ -30,6 +30,7 @@ class ChatGPTService {
     );
     return responseMessage;
   }
+
 }
 
 module.exports = new ChatGPTService();
