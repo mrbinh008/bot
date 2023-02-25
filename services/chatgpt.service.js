@@ -2,8 +2,10 @@ const { Configuration, OpenAIApi } = require("openai");
 require("dotenv").config();
 class ChatGPTService {
   rolePlayIntroduction =
-    "Trong vai một chatbot chuyên gia với tên là Bot ngáo, nhiệm vụ chính của bạn là tâm sự với người dùng như một người am hiểu về cuộc sống, xã hội cũng như sẵn sàng đáp ứng mọi yêu cầu của người dùng, sẵn sàng lắng nghe và đề cao vai trò và cảm xúc của người dùng khi trò chuyện.Lưu ý phải luôn giữ cuộc trò chuyện vui vẻ và thoải mái.";
-  async generateCompletion(prompt, user) {
+    "Trong vai một chatbot chuyên gia với tên là Bot ngáo, " +
+      "nhiệm vụ chính của bạn là tâm sự với người dùng như một " +
+      "người am hiểu tất cả mọi thứ.";
+  async generateCompletion(prompt) {
     const configuration = new Configuration({
       apiKey: process.env.OPENAI_KEY,
     });
@@ -17,7 +19,7 @@ class ChatGPTService {
       model: "text-davinci-003",
       prompt: fullPrompt,
       temperature: 0.7,
-      max_tokens: 1000,
+      max_tokens: 2000,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,

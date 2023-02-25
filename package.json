@@ -10,10 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
+    "messenger-bot": "^2.5.0",
     "mongoose": "^6.9.2",
     "node-telegram-bot-api": "^0.61.0",
     "nodemon": "^2.0.20",
-    "openai": "^3.1.0"
+    "openai": "^3.1.0",
+    "telegraf": "^4.11.2"
   }
 }
-
